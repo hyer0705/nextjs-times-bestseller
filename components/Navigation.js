@@ -1,19 +1,22 @@
 import Link from "next/link";
-import styles from "../styles/Navigation.module.css";
 
 export default function Navigation() {
   return (
     <>
-      <nav className={styles.nav}>
-        <div className={styles.nav__menuwrapper}>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
+      <nav className={`border fixed split-nav`}>
+        <div className="nav-brand">
+          <h4>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </h4>
         </div>
-        <div className={styles.nav__menuwrapper}>
-          <Link href="/about">
-            <a>About</a>
-          </Link>
+        <div className="nav-brand">
+          <h4>
+            <Link href="/about">
+              <a>About</a>
+            </Link>
+          </h4>
         </div>
       </nav>
     </>
