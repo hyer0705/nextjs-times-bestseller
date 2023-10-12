@@ -10,7 +10,7 @@ export default function Navigation() {
             <a>Home</a>
           </Link>
         </div>
-        <div>
+        <div className={styles.nav__menuwrapper}>
           <Link href="/about">
             <a>About</a>
           </Link>
