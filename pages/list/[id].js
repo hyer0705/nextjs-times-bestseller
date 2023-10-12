@@ -1,3 +1,3 @@
-export default function Detail(params) {
+export default function Detail() {
   return <h1>Detail Component~~~</h1>;
 }
