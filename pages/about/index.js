@@ -1,4 +1,4 @@
-export default function About() {
+export default function AboutPage() {
   return (
     <main className="paper container">
       <h1>About US</h1>
