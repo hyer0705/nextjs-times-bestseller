@@ -18,6 +18,7 @@ export default function DetailPage({ res: { results: bookList } }) {
               style={{ width: "330px" }}
             >
               <img
+                title={book.title}
                 alt={book.title}
                 src={book.book_image}
                 style={{ height: "500px" }}
