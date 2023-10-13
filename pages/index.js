@@ -18,9 +18,7 @@ export default function IndexPage({ res: { results: bestSellerList } }) {
 }
 
 export async function getServerSideProps() {
-  const res = await (
-    await fetch("https://books-api.nomadcoders.workers.dev/lists")
-  ).json();
+  const res = await (await fetch(`http://localhost:3000/api/lists`)).json();
 
   return { props: { res } };
 }

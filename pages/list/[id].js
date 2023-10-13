@@ -42,7 +42,7 @@ export default function DetailPage({ res: { results: bookList } }) {
 
 export async function getServerSideProps({ params: { id } }) {
   const res = await (
-    await fetch(`https://books-api.nomadcoders.workers.dev/list?name=${id}`)
+    await fetch(`http://localhost:3000/api/list/${id}`)
   ).json();
   return { props: { res } };
 }
