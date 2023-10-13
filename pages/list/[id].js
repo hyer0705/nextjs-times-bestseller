@@ -1,6 +1,23 @@
 import Head from "next/head";
 
-export default function DetailPage({ res: { results: bookList } }) {
+export default function DetailPage({ error, res: { results: bookList } }) {
+  if (error) {
+    return (
+      <>
+        <Head>
+          <title>NotFound... | The New York Times Best Seller</title>
+        </Head>
+        <main className="paper">
+          <h2>{error.title}</h2>
+        </main>
+        {/**
+         * To Do
+         * Redirecting to Home in 3 seconds... 구현하기~
+         */}
+      </>
+    );
+  }
+
   const { display_name: displayName, books } = bookList || {};
 
   return (
@@ -52,5 +69,11 @@ export async function getServerSideProps({ params: { id } }) {
   const res = await (
     await fetch(`http://localhost:3000/api/list/${id}`)
   ).json();
-  return { props: { res } };
+
+  const error =
+    res.status === "ERROR"
+      ? { title: res.errors[0], status: res.status }
+      : false;
+
+  return { props: { error, res } };
 }
