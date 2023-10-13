@@ -8,6 +8,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://unpkg.com/papercss@1.9.2/dist/paper.min.css"
         />
+        <link rel="icon" href="/new_york_times_icon.ico" type="image/x-icon" />
       </Head>
       <body>
         <Main />
