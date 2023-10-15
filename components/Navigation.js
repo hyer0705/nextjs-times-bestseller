@@ -6,16 +6,12 @@ export default function Navigation() {
       <nav className={`border fixed split-nav`}>
         <div className="nav-brand">
           <h4>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <Link href="/">Home</Link>
           </h4>
         </div>
         <div className="nav-brand">
           <h4>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
+            <Link href="/about">About</Link>
           </h4>
         </div>
       </nav>
