@@ -4,7 +4,7 @@ export const metadata = {
 
 export default function NotFound() {
   return (
-    <div>
+    <div className="paper container">
       <h1>What are you doing here...?</h1>
     </div>
   );

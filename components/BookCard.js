@@ -1,3 +1,5 @@
+import { ErrorBoundary } from "react-error-boundary";
+
 export default async function BookCard({ params }) {
   const { results: bookList } = await (
     await fetch(`http://localhost:3000/api/list/${params.id}`, {
@@ -5,12 +7,11 @@ export default async function BookCard({ params }) {
     })
   ).json();
 
-  const { display_name: displayName, books } = bookList || {};
+  const { books } = bookList || {};
 
   return (
-    <>
-      <h2 style={{ textAlign: "center" }}>{displayName}</h2>
-      <div className="row flex-spaces child-borders">
+    <div className="row flex-spaces child-borders">
+      <ErrorBoundary fallback={<Error />}>
         {books.map((book, index) => (
           <div
             key={`${index}_${book.rank}_${book.title}`}
@@ -37,7 +38,7 @@ export default async function BookCard({ params }) {
             </div>
           </div>
         ))}
-      </div>
-    </>
+      </ErrorBoundary>
+    </div>
   );
 }
