@@ -1,0 +1,16 @@
+.to-top {
+  opacity: 1;
+  display: inline-block;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+
+.to-top .paper-btn {
+  padding: 0.6em 1em;
+  border-top-left-radius: 185px 160px;
+  border-top-right-radius: 200px 195px;
+  border-bottom-right-radius: 160px 195px;
+  border-bottom-left-radius: 185px 190px;
+}
