@@ -2,7 +2,7 @@ import Link from "next/link";
 
 async function getBestSellerList() {
   const { results } = await (
-    await fetch(`http://localhost:3000/api/lists`, { cache: "no-store" })
+    await fetch(`/api/lists`, { cache: "no-store" })
   ).json();
 
   return results;

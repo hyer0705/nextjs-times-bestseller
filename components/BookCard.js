@@ -2,7 +2,7 @@ import { ErrorBoundary } from "react-error-boundary";
 
 export default async function BookCard({ params }) {
   const { results: bookList } = await (
-    await fetch(`http://localhost:3000/api/list/${params.id}`, {
+    await fetch(`/api/list/${params.id}`, {
       cache: "no-store",
     })
   ).json();
