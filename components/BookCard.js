@@ -3,7 +3,7 @@ import { ErrorBoundary } from "react-error-boundary";
 export default async function BookCard({ params }) {
   const { results: bookList } = await (
     await fetch(
-      `https://books-api.nomadcoders.workers.dev/list?name=${params.id}`,
+      `https://nextjs-times-bestseller.vercel.app/api/list/${params.id}`,
       {
         cache: "no-store",
       }
