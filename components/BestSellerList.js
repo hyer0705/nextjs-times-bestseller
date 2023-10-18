@@ -2,7 +2,7 @@ import Link from "next/link";
 
 async function getBestSellerList() {
   const { results } = await (
-    await fetch(`https://books-api.nomadcoders.workers.dev/lists`, {
+    await fetch(`/api/lists`, {
       cache: "no-store",
     })
   ).json();
