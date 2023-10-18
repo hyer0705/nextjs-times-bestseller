@@ -1,5 +1,7 @@
 # nextjs-times-bestseller
- 
+### Main Page Preveiw
+ ![image](https://github.com/hyer0705/nextjs-times-bestseller/assets/50125734/a74ee980-3bba-457e-a17a-b540ec1f5c6f)
+
 > 개발기간: 2023.10.12 ~ 2023.10.15
 
 ## 배포주소
