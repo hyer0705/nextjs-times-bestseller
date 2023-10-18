@@ -2,7 +2,7 @@ import Link from "next/link";
 
 async function getBestSellerList() {
   const { results } = await (
-    await fetch(`/api/lists`, {
+    await fetch(`https://nextjs-times-bestseller.vercel.app/api/lists`, {
       cache: "no-store",
     })
   ).json();
