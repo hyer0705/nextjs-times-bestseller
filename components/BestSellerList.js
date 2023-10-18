@@ -2,10 +2,9 @@ import Link from "next/link";
 
 async function getBestSellerList() {
   const { results } = await (
-    await fetch(
-      `https://nextjs-times-bestseller-o9e68bble-hyer0705s-projects.vercel.app/api/lists`,
-      { cache: "no-store" }
-    )
+    await fetch(`https://books-api.nomadcoders.workers.dev/lists`, {
+      cache: "no-store",
+    })
   ).json();
 
   return results;
